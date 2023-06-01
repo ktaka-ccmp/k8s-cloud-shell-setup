@@ -8,3 +8,8 @@ Run:
 ```bash
 ./setup.sh
 ```
+
+Clean up:
+```bash
+gcloud projects delete "${DEVSHELL_PROJECT_ID}"
+```
