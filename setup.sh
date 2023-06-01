@@ -54,7 +54,7 @@ gcloud beta container --project "${GOOGLE_PROJECT_ID}" clusters create "${GOOGLE
        --metadata disable-legacy-endpoints=true \
        --scopes "https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append" \
        --num-nodes "1" \
-       --logging --monitoring \
+       --logging=SYSTEM,API_SERVER,WORKLOAD --monitoring=SYSTEM,API_SERVER \
        --enable-ip-alias --default-max-pods-per-node "110" \
        --addons HorizontalPodAutoscaling,HttpLoadBalancing \
        --enable-autoupgrade --enable-autorepair
